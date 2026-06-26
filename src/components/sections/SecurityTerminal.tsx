@@ -42,7 +42,7 @@ export default function SecurityTerminal() {
 
   return (
     <section className="section relative" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}

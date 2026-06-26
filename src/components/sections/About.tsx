@@ -41,7 +41,7 @@ export default function About() {
 
   return (
     <section id="about" className="section relative" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-8">
         {/* Section label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

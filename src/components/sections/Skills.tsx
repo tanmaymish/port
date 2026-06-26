@@ -92,7 +92,7 @@ export default function Skills() {
 
   return (
     <section id="skills" className="section relative" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-8">
         {/* Label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -188,7 +188,7 @@ export default function Hero() {
       <div className="absolute top-0 inset-x-0 h-20 bg-gradient-to-b from-[#050810] to-transparent pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-6xl mx-auto px-8 text-center">
         {/* Status badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
