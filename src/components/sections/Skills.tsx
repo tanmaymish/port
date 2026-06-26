@@ -144,7 +144,7 @@ export default function Skills() {
                 </span>
               </div>
 
-              <p className="text-xs text-slate-600 mb-5">{cat.description}</p>
+              <p className="text-xs text-slate-500 mb-5">{cat.description}</p>
 
               {/* Proficiency bars for key skills */}
               <div className="space-y-2.5 mb-5">

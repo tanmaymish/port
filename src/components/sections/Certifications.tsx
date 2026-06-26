@@ -80,7 +80,7 @@ export default function Certifications() {
                       <h3 className="font-semibold text-slate-200 group-hover:text-white transition-colors mb-0.5">
                         {cert.title}
                       </h3>
-                      <p className="text-xs text-slate-600 mb-1.5">{cert.issuer}</p>
+                      <p className="text-xs text-slate-500 mb-1.5">{cert.issuer}</p>
                       <p className="text-sm text-slate-500">{cert.description}</p>
                     </div>
                   </motion.div>
@@ -129,9 +129,9 @@ export default function Certifications() {
                         <h3 className="font-semibold text-slate-200 group-hover:text-white transition-colors">
                           {ach.title}
                         </h3>
-                        <span className="text-xs text-slate-600 font-mono">{ach.year}</span>
+                        <span className="text-xs text-slate-500 font-mono">{ach.year}</span>
                       </div>
-                      <p className="text-xs text-slate-600 mb-1.5">{ach.org}</p>
+                      <p className="text-xs text-slate-500 mb-1.5">{ach.org}</p>
                       <p className="text-sm text-slate-500">{ach.description}</p>
                     </div>
                   </motion.div>

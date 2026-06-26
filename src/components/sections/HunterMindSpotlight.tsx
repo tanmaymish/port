@@ -195,7 +195,7 @@ export default function HunterMindSpotlight() {
           initial={{ opacity: 0, y: 10 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.3, duration: 0.5 }}
-          className="text-xs font-mono text-slate-600 uppercase tracking-widest mb-4"
+          className="text-xs font-mono text-slate-500 uppercase tracking-widest mb-4"
         >
           Module Pipeline
         </motion.div>
@@ -231,9 +231,9 @@ export default function HunterMindSpotlight() {
                     <span className="text-sm font-medium text-slate-300 group-hover:text-white transition-colors truncate">
                       {mod.name}
                     </span>
-                    <span className="text-xs font-mono text-slate-700 shrink-0">· planned</span>
+                    <span className="text-xs font-mono text-slate-500 shrink-0">· planned</span>
                   </div>
-                  <p className="text-xs text-slate-600 leading-relaxed">{mod.description}</p>
+                  <p className="text-xs text-slate-400 leading-relaxed">{mod.description}</p>
                 </div>
               </motion.div>
             );
@@ -246,7 +246,7 @@ export default function HunterMindSpotlight() {
             className="flex items-center justify-center p-4 rounded-xl border border-dashed"
             style={{ borderColor: "rgba(239,68,68,0.2)" }}
           >
-            <span className="text-xs font-mono text-slate-700">+ more modules planned</span>
+            <span className="text-xs font-mono text-slate-500">+ more modules planned</span>
           </motion.div>
         </div>
 

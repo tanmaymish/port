@@ -71,14 +71,14 @@ function TimelineItem({
             {item.year}
           </span>
           <span
-            className="text-xs text-slate-600"
+            className="text-xs text-slate-500"
             style={{ color: `${config.color}60` }}
           >
             {config.label}
           </span>
         </div>
         <h3 className="font-semibold text-slate-200 mb-1.5">{item.title}</h3>
-        <p className="text-sm text-slate-500 leading-relaxed">{item.description}</p>
+        <p className="text-sm text-slate-400 leading-relaxed">{item.description}</p>
       </div>
     </motion.div>
   );

@@ -41,7 +41,7 @@ export default function SecurityTerminal() {
   }, [inView]);
 
   return (
-    <section className="section relative" ref={ref}>
+    <section className="relative py-16" ref={ref}>
       <div className="max-w-6xl mx-auto px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
