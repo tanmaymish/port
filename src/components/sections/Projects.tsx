@@ -22,7 +22,7 @@ const STATUS_LABELS = {
 
 function MetricCard({ label, value, unit }: { label: string; value: string; unit: string }) {
   return (
-    <div className="flex flex-col p-4 glass rounded-xl border border-white/08">
+    <div className="flex flex-col p-4 rounded-xl border" style={{ background: "rgba(255,255,255,0.04)", borderColor: "rgba(255,255,255,0.07)" }}>
       <span className="text-xs text-slate-500 mb-1">{label}</span>
       <div className="flex items-end gap-1">
         <span className="text-2xl font-bold text-white leading-none">{value}</span>
@@ -43,12 +43,19 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: index * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="group glass rounded-2xl border border-white/08 hover:border-white/15 transition-all duration-300 overflow-hidden"
+      className="group rounded-2xl border transition-all duration-300 overflow-hidden"
+      style={{
+        background: "rgba(10, 18, 40, 0.85)",
+        borderColor: "rgba(255,255,255,0.08)",
+        backdropFilter: "blur(20px)",
+      }}
       onMouseEnter={(e) => {
-        (e.currentTarget as HTMLElement).style.boxShadow = `0 0 50px ${project.color}12`;
+        (e.currentTarget as HTMLElement).style.boxShadow = `0 8px 60px ${project.color}18`;
+        (e.currentTarget as HTMLElement).style.borderColor = `rgba(255,255,255,0.14)`;
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLElement).style.boxShadow = "none";
+        (e.currentTarget as HTMLElement).style.borderColor = `rgba(255,255,255,0.08)`;
       }}
     >
       {/* Accent line */}
@@ -256,7 +263,7 @@ export default function Projects() {
           </p>
         </motion.div>
 
-        <div className="space-y-6">
+        <div className="space-y-10">
           {projects.map((project, i) => (
             <ProjectCard key={project.id} project={project} index={i} />
           ))}
