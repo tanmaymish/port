@@ -112,14 +112,15 @@ body {
 
 /* Section padding */
 .section {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  border-top: 1px solid rgba(255,255,255,0.04);
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
 }
 

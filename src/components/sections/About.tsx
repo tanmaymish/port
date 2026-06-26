@@ -55,7 +55,7 @@ export default function About() {
           <div className="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent" />
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left: bio */}
           <div className="space-y-6">
             <motion.h2
@@ -129,7 +129,7 @@ export default function About() {
           </div>
 
           {/* Right: engineering pillars */}
-          <div className="grid grid-cols-1 gap-4">
+          <div className="grid grid-cols-2 gap-4">
             {pillars.map((pillar, i) => {
               const Icon = pillar.icon;
               return (

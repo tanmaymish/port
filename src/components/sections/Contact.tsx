@@ -64,7 +64,7 @@ export default function Contact() {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1, duration: 0.8 }}
-              className="text-5xl md:text-6xl font-bold text-white leading-tight mb-6"
+              className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6"
             >
               Let's build
               <br />
