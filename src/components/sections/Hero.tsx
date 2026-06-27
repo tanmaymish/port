@@ -30,9 +30,12 @@ function TypedRole() {
 
   return (
     <div className="h-12 flex items-center justify-center">
-      <span className="text-2xl md:text-3xl font-mono font-light grad-rick">
+      <span
+        className="text-2xl md:text-3xl font-mono font-semibold grad-rick"
+        style={{ filter: "drop-shadow(0 0 16px rgba(0,153,255,0.7)) drop-shadow(0 0 32px rgba(153,0,255,0.5))" }}
+      >
         {displayed}
-        <span className="animate-blink" style={{ color: "#ff0077" }}>_</span>
+        <span className="animate-blink" style={{ color: "#ff0077", WebkitTextFillColor: "#ff0077", textShadow: "0 0 12px rgba(255,0,119,0.9)" }}>_</span>
       </span>
     </div>
   );
@@ -88,10 +91,19 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.35, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className="text-7xl md:text-9xl font-black tracking-tight mb-4 leading-none"
-          style={{ textShadow: "0 4px 30px rgba(0,0,0,0.8)" }}
         >
-          <span className="block text-white animate-glitch">Tanmay</span>
-          <span className="block grad-portal">Mishra</span>
+          <span
+            className="block text-white animate-glitch"
+            style={{ textShadow: "0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(0,153,255,0.6), 0 0 80px rgba(0,153,255,0.4)" }}
+          >
+            Tanmay
+          </span>
+          <span
+            className="block grad-psychedelic"
+            style={{ filter: "drop-shadow(0 0 25px rgba(255,0,119,0.7)) drop-shadow(0 0 50px rgba(153,0,255,0.5))" }}
+          >
+            Mishra
+          </span>
         </motion.h1>
 
         {/* Typed role */}
@@ -101,17 +113,17 @@ export default function Hero() {
 
         {/* R&M quote */}
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.6, duration: 0.6 }}
-          className="font-mono text-xs mb-6 tracking-wider italic px-4"
-          style={{ color: "#ff66aa", textShadow: "0 0 12px rgba(0,0,0,0.9)" }}>
+          className="font-mono text-xs mb-6 tracking-wider italic px-4 font-bold"
+          style={{ color: "#ff2e88", textShadow: "0 0 12px rgba(255,0,119,0.9), 0 0 24px rgba(255,0,119,0.5)" }}>
           "I'm sorry, but your opinion means very little to me." — Rick Sanchez, C-137
         </motion.p>
 
         {/* Bio */}
         <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65, duration: 0.6 }}
-          className="max-w-lg mx-auto text-lg leading-relaxed mb-10" style={{ color: "#e2e8f0", textShadow: "0 2px 12px rgba(0,0,0,0.8)" }}>
+          className="max-w-lg mx-auto text-lg leading-relaxed mb-10 font-medium" style={{ color: "#ffffff", textShadow: "0 0 10px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,1)" }}>
           Building systems that scale across dimensions — distributed architectures,
           backend engineering, and cybersecurity.{" "}
-          <span className="font-mono font-bold" style={{ color: "#ffdd33" }}>Wubba lubba dub dub! 🧪</span>
+          <span className="font-mono font-black" style={{ color: "#ffe600", textShadow: "0 0 14px rgba(255,204,0,0.9), 0 0 28px rgba(255,204,0,0.5)" }}>Wubba lubba dub dub! 🧪</span>
         </motion.p>
 
         {/* CTAs */}
