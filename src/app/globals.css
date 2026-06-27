@@ -15,7 +15,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-* { box-sizing: border-box; padding: 0; margin: 0; }
+* { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 body { background-color: var(--bg); color: #e8eaed; overflow-x: hidden; }
 
