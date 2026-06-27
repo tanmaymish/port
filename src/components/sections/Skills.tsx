@@ -48,15 +48,20 @@ export default function Skills() {
   return (
     <section id="skills" className="section" ref={ref}>
       <div className="max-w-6xl mx-auto px-8">
+        {/* Centered section label */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-16">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">// 02 · SKILLS</span>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, rgba(57,255,20,0.4), transparent)" }} />
+          className="text-center mb-16">
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">// 02 · SKILLS · INTERDIMENSIONAL TECH</span>
+          <div className="flex items-center justify-center gap-4 mt-3">
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(57,255,20,0.5))" }} />
+            <span style={{ color: "#39ff14", textShadow: "0 0 10px rgba(57,255,20,0.5)" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(57,255,20,0.5))" }} />
+          </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1, duration: 0.7 }} className="mb-12">
-          <h2 className="text-4xl font-black text-white mb-3">Engineering Stack</h2>
-          <p className="max-w-xl" style={{ color: "#94a3b8" }}>A deliberately chosen toolkit. Each layer picked for production viability, not trend-chasing.</p>
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1, duration: 0.7 }} className="text-center mb-12">
+          <h2 className="text-4xl font-black text-white mb-3">🛸 Interdimensional Tech Arsenal</h2>
+          <p className="max-w-xl mx-auto" style={{ color: "#94a3b8" }}>A deliberately chosen toolkit. Each layer picked for production viability across dimensions.</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -65,14 +70,14 @@ export default function Skills() {
               initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 + i * 0.08, duration: 0.6 }}
               className="p-6 rounded-2xl transition-all duration-300"
-              style={{ background: "rgba(10,3,30,0.92)", border: `1px solid ${cat.color}20` }}
+              style={{ background: "rgba(10,3,30,0.92)", border: `1px solid ${cat.color}30` }}
               onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}45`;
-                (e.currentTarget as HTMLElement).style.boxShadow = `0 0 40px ${cat.color}15, 0 8px 40px rgba(0,0,0,0.4)`;
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)";
+                (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}60`;
+                (e.currentTarget as HTMLElement).style.boxShadow = `0 0 40px ${cat.color}20, 0 8px 40px rgba(0,0,0,0.4)`;
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
               }}
               onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}20`;
+                (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}30`;
                 (e.currentTarget as HTMLElement).style.boxShadow = "none";
                 (e.currentTarget as HTMLElement).style.transform = "none";
               }}
@@ -80,7 +85,7 @@ export default function Skills() {
               <div className="flex items-start justify-between mb-4">
                 <h3 className="font-bold text-white text-sm">{cat.label}</h3>
                 <span className="text-xs px-2 py-0.5 rounded-full font-mono font-bold"
-                  style={{ background: `${cat.color}18`, color: cat.color, border: `1px solid ${cat.color}30` }}>
+                  style={{ background: `${cat.color}18`, color: cat.color, border: `1px solid ${cat.color}40` }}>
                   {cat.items.length}
                 </span>
               </div>
@@ -91,7 +96,7 @@ export default function Skills() {
               <div className="flex flex-wrap gap-1.5">
                 {cat.items.map((item) => (
                   <span key={item} className="text-xs px-2.5 py-1 rounded-lg font-mono"
-                    style={{ background: `${cat.color}10`, color: cat.color, border: `1px solid ${cat.color}20` }}>
+                    style={{ background: `${cat.color}10`, color: cat.color, border: `1px solid ${cat.color}25` }}>
                     {item}
                   </span>
                 ))}

@@ -26,11 +26,15 @@ export default function Contact() {
 
       <div className="max-w-6xl mx-auto px-8 relative">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-16">
+          className="text-center mb-16">
           <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
-            // 06 · CONTACT
+            // 06 · CONTACT · OPEN CHANNEL
           </span>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, rgba(0,255,136,0.3), transparent)" }} />
+          <div className="flex items-center justify-center gap-4 mt-3">
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(57,255,20,0.5))" }} />
+            <span style={{ color: "#39ff14", textShadow: "0 0 10px rgba(57,255,20,0.5)" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(57,255,20,0.5))" }} />
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">

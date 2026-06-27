@@ -17,10 +17,15 @@ export default function About() {
   return (
     <section id="about" className="section" ref={ref}>
       <div className="max-w-6xl mx-auto px-8">
+        {/* Centered section label */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
-          className="flex items-center gap-3 mb-16">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">// 01 · ABOUT</span>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(90deg, rgba(57,255,20,0.4), transparent)" }} />
+          className="text-center mb-16">
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">// 01 · ABOUT · DIMENSION C-137</span>
+          <div className="flex items-center justify-center gap-4 mt-3">
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(57,255,20,0.5))" }} />
+            <span style={{ color: "#39ff14", textShadow: "0 0 10px rgba(57,255,20,0.5)" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(57,255,20,0.5))" }} />
+          </div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-14 items-start">
@@ -43,6 +48,15 @@ export default function About() {
               Currently finishing my B.Tech in CSE at KIIT University. Every project is designed
               to solve a real problem and operate under real constraints.
             </motion.p>
+
+            {/* Rick quote */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.35, duration: 0.7 }}
+              className="p-4 rounded-xl border-l-4 italic"
+              style={{ background: "rgba(57,255,20,0.05)", borderLeftColor: "#39ff14" }}>
+              <p className="text-sm font-mono" style={{ color: "#39ff14" }}>
+                🧪 "Nobody exists on purpose. Nobody belongs anywhere. But I still ship to prod." — Rick (probably)
+              </p>
+            </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.4, duration: 0.7 }}
               className="flex flex-col gap-3 pt-4">
@@ -75,20 +89,20 @@ export default function About() {
                   initial={{ opacity: 0, x: 30 }} animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
                   className="p-5 rounded-2xl transition-all duration-300 cursor-default"
-                  style={{ background: "rgba(10,3,30,0.92)", border: `1px solid ${p.color}25` }}
+                  style={{ background: "rgba(10,3,30,0.92)", border: `1px solid ${p.color}35` }}
                   onMouseEnter={(e) => {
                     (e.currentTarget as HTMLElement).style.boxShadow = `0 0 40px ${p.glow}, 0 0 80px ${p.color}08`;
-                    (e.currentTarget as HTMLElement).style.borderColor = `${p.color}50`;
-                    (e.currentTarget as HTMLElement).style.transform = "translateY(-3px)";
+                    (e.currentTarget as HTMLElement).style.borderColor = `${p.color}60`;
+                    (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
                   }}
                   onMouseLeave={(e) => {
                     (e.currentTarget as HTMLElement).style.boxShadow = "none";
-                    (e.currentTarget as HTMLElement).style.borderColor = `${p.color}25`;
+                    (e.currentTarget as HTMLElement).style.borderColor = `${p.color}35`;
                     (e.currentTarget as HTMLElement).style.transform = "none";
                   }}
                 >
                   <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4"
-                    style={{ background: `${p.color}15`, border: `1px solid ${p.color}30` }}>
+                    style={{ background: `${p.color}15`, border: `1px solid ${p.color}35` }}>
                     <Icon size={18} style={{ color: p.color }} />
                   </div>
                   <h3 className="font-bold text-white mb-2 text-sm">{p.title}</h3>
