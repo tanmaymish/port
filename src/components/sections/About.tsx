@@ -36,14 +36,15 @@ export default function About() {
             <span className="grad-portal">software developer.</span>
           </h2>
           <p className="max-w-xl mx-auto text-lg leading-relaxed" style={{ color: "#94a3b8" }}>
-            I enjoy building systems. Distributed systems, backend services, cybersecurity tooling, automation.
-            I want to understand how things break before I build them.
+            Backend-focused developer experienced in designing scalable RESTful APIs and
+            microservices with Node.js, Java, and Spring Boot. I care about how systems behave
+            under pressure — and how they fail gracefully when they don&apos;t.
           </p>
           {/* Rick quote */}
           <div className="inline-block mt-5 px-5 py-3 rounded-xl"
-            style={{ background: "rgba(255,0,119,0.07)", border: "1px solid rgba(255,0,119,0.25)" }}>
-            <p className="text-sm font-mono italic" style={{ color: "#38bdf8" }}>
-              "Nobody exists on purpose. Nobody belongs anywhere. But I still ship to prod." — Rick
+            style={{ background: "rgba(52,232,158,0.06)", border: "1px solid rgba(52,232,158,0.22)" }}>
+            <p className="text-sm font-mono italic" style={{ color: "#5eead4" }}>
+              &quot;Nobody exists on purpose. Nobody belongs anywhere. But I still ship to prod.&quot; — Rick
             </p>
           </div>
         </motion.div>
@@ -53,7 +54,7 @@ export default function About() {
           className="flex flex-wrap justify-center gap-4 mb-14">
           {[
             { icon: GraduationCap, color: "#34e89e", title: personal.education.degree, sub: `${personal.education.university} · GPA ${personal.education.gpa}` },
-            { icon: MapPin, color: "#9900ff", title: `${personal.location}`, sub: "Available for remote roles globally" },
+            { icon: MapPin, color: "#38bdf8", title: `${personal.location}`, sub: "Available for remote roles globally" },
           ].map((item, i) => {
             const Icon = item.icon;
             return (

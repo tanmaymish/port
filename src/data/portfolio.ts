@@ -1,7 +1,7 @@
 export const personal = {
   name: "Tanmay Mishra",
   email: "tanmaymish78@gmail.com",
-  location: "India",
+  location: "Bhubaneswar, India",
   roles: [
     "Software Engineer",
     "Cybersecurity Engineer",
