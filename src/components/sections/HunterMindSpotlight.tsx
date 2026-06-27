@@ -110,17 +110,32 @@ export default function HunterMindSpotlight() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 content-start">
-            {stats.map((s, i) => (
-              <motion.div key={s.label}
-                initial={{ opacity: 0, scale: 0.95 }} animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ delay: 0.3 + i * 0.07, duration: 0.5 }}
-                className="p-4 rounded-xl"
-                style={{ background: "rgba(52,232,158,0.05)", border: "1px solid rgba(52,232,158,0.12)" }}>
-                <div className="text-lg font-bold" style={{ color: "#34e89e" }}>{s.value}</div>
-                <div className="text-xs mt-0.5" style={{ color: "#64748b" }}>{s.label}</div>
-              </motion.div>
-            ))}
+          <div className="space-y-3 content-start">
+            <div className="grid grid-cols-2 gap-3">
+              {stats.map((s, i) => (
+                <motion.div key={s.label}
+                  initial={{ opacity: 0, scale: 0.95 }} animate={inView ? { opacity: 1, scale: 1 } : {}}
+                  transition={{ delay: 0.3 + i * 0.07, duration: 0.5 }}
+                  className="p-4 rounded-xl"
+                  style={{ background: "rgba(52,232,158,0.05)", border: "1px solid rgba(52,232,158,0.12)" }}>
+                  <div className="text-lg font-bold" style={{ color: "#34e89e" }}>{s.value}</div>
+                  <div className="text-xs mt-0.5" style={{ color: "#64748b" }}>{s.label}</div>
+                </motion.div>
+              ))}
+            </div>
+            {/* Thematic gif — the "hunt" */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }} animate={inView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ delay: 0.55, duration: 0.5 }}
+              className="rounded-xl overflow-hidden"
+              style={{ border: "1px solid rgba(52,232,158,0.18)" }}>
+              <img src="/port/morty-portal-gun.gif" alt="" aria-hidden="true" className="w-full object-cover" />
+              <div className="px-3 py-2" style={{ background: "rgba(255,255,255,0.02)" }}>
+                <span className="font-mono text-[11px]" style={{ color: "#64748b" }}>
+                  <span style={{ color: "#34e89e" }}>{"// "}</span>locking onto the attack surface
+                </span>
+              </div>
+            </motion.div>
           </div>
         </motion.div>
 

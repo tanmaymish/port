@@ -42,16 +42,16 @@ export default function SecurityTerminal() {
 
   return (
     <section className="relative py-16" ref={ref}>
-      <div className="max-w-6xl mx-auto px-8">
+      <div className="max-w-6xl mx-auto px-8 grid lg:grid-cols-3 gap-6 items-stretch">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="rounded-2xl  overflow-hidden"
-          style={{ boxShadow: "0 0 60px rgba(0,255,136,0.06)" }}
+          className="lg:col-span-2 rounded-2xl overflow-hidden"
+          style={{ boxShadow: "0 0 60px rgba(52,232,158,0.06)", border: "1px solid rgba(255,255,255,0.08)" }}
         >
           {/* Terminal titlebar */}
-          <div className="flex items-center gap-2 px-5 py-3.5 border-b">
+          <div className="flex items-center gap-2 px-5 py-3.5 border-b" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full bg-red-500/60" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
@@ -68,7 +68,7 @@ export default function SecurityTerminal() {
               <div key={i} className="flex gap-3">
                 <span
                   className="flex-shrink-0 select-none"
-                  style={{ color: line.prefix === "$" ? "#3b82f6" : "#475569" }}
+                  style={{ color: line.prefix === "$" ? "#34e89e" : "#475569" }}
                 >
                   {line.prefix}
                 </span>
@@ -81,6 +81,28 @@ export default function SecurityTerminal() {
                 </span>
               </div>
             ))}
+          </div>
+        </motion.div>
+
+        {/* Reaction gif panel */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.15 }}
+          className="rounded-2xl overflow-hidden flex flex-col"
+          style={{ border: "1px solid rgba(255,255,255,0.08)", background: "rgba(255,255,255,0.02)" }}
+        >
+          <img
+            src="/port/morty-shocked.gif"
+            alt="Morty reacting"
+            className="w-full object-cover flex-1"
+            style={{ minHeight: 0 }}
+          />
+          <div className="px-5 py-4 border-t" style={{ borderColor: "rgba(255,255,255,0.08)" }}>
+            <p className="font-mono text-xs leading-relaxed" style={{ color: "#94a3b8" }}>
+              <span style={{ color: "#34e89e" }}>{"// "}</span>
+              me watching the nmap scan finish in real time
+            </p>
           </div>
         </motion.div>
       </div>
