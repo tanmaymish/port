@@ -45,17 +45,17 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
       transition={{ delay: index * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
       className="group rounded-2xl border transition-all duration-300 overflow-hidden"
       style={{
-        background: "rgba(10, 18, 40, 0.85)",
-        borderColor: "rgba(255,255,255,0.08)",
+        background: "rgba(10,3,30,0.92)",
+        borderColor: "rgba(57,255,20,0.15)",
         backdropFilter: "blur(20px)",
       }}
       onMouseEnter={(e) => {
         (e.currentTarget as HTMLElement).style.boxShadow = `0 8px 60px ${project.color}18`;
-        (e.currentTarget as HTMLElement).style.borderColor = `rgba(255,255,255,0.14)`;
+        (e.currentTarget as HTMLElement).style.borderColor = `rgba(57,255,20,0.3)`;
       }}
       onMouseLeave={(e) => {
         (e.currentTarget as HTMLElement).style.boxShadow = "none";
-        (e.currentTarget as HTMLElement).style.borderColor = `rgba(255,255,255,0.08)`;
+        (e.currentTarget as HTMLElement).style.borderColor = `rgba(57,255,20,0.15)`;
       }}
     >
       {/* Accent line */}
@@ -244,10 +244,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
-            03 / Projects
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
+            // 03 · PROJECTS
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-green-500/20 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-[#39ff14]/30 to-transparent" />
         </motion.div>
 
         <motion.div

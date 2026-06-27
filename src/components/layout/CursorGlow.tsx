@@ -45,7 +45,7 @@ export default function CursorGlow() {
         width: 600,
         height: 600,
         background:
-          "radial-gradient(circle, rgba(59,130,246,0.05) 0%, rgba(59,130,246,0.02) 40%, transparent 70%)",
+          "radial-gradient(circle, rgba(57,255,20,0.06) 0%, rgba(204,0,255,0.03) 50%, transparent 70%)",
       }}
     />
   );

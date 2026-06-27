@@ -11,10 +11,13 @@ import SecurityTerminal from "@/components/sections/SecurityTerminal";
 import HunterMindSpotlight from "@/components/sections/HunterMindSpotlight";
 import Contact from "@/components/sections/Contact";
 import CommandPalette from "@/components/ui/CommandPalette";
+import StarField from "@/components/layout/StarField";
 
 export default function Home() {
   return (
     <>
+      <StarField />
+      <div className="stars" aria-hidden="true" />
       <ScrollProgress />
       <CursorGlow />
       <Navbar />

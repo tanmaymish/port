@@ -97,10 +97,10 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
-            04 / Timeline
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
+            // 04 · TIMELINE
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-green-500/20 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-[#39ff14]/30 to-transparent" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-x-20 gap-y-0">

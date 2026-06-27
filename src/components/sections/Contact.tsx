@@ -27,8 +27,8 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto px-8 relative">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16">
-          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
-            06 / Contact
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
+            // 06 · CONTACT
           </span>
           <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, rgba(0,255,136,0.3), transparent)" }} />
         </motion.div>

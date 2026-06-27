@@ -31,10 +31,10 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
-            05 / Recognition
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
+            // 05 · RECOGNITION
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-green-500/20 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-[#39ff14]/30 to-transparent" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">
@@ -59,7 +59,7 @@ export default function Certifications() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
-                    className="group flex items-start gap-4 p-5 glass rounded-2xl border border-white/08 hover:border-white/15 transition-all duration-300"
+                    className="group flex items-start gap-4 p-5 glass rounded-2xl border  hover:border-white/15 transition-all duration-300"
                     onMouseEnter={(e) => {
                       (e.currentTarget as HTMLElement).style.boxShadow = `0 0 30px ${cert.color}12`;
                     }}
@@ -110,7 +110,7 @@ export default function Certifications() {
                     initial={{ opacity: 0, x: 20 }}
                     animate={inView ? { opacity: 1, x: 0 } : {}}
                     transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
-                    className="group relative flex items-start gap-4 p-5 glass rounded-2xl border border-white/08 hover:border-white/15 transition-all duration-300"
+                    className="group relative flex items-start gap-4 p-5 glass rounded-2xl border  hover:border-white/15 transition-all duration-300"
                   >
                     {ach.highlight && (
                       <div

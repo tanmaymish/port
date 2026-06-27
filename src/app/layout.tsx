@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#050810",
+  themeColor: "#03000a",
   width: "device-width",
   initialScale: 1,
 };
@@ -69,7 +69,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       style={{ colorScheme: "dark" }}
     >
-      <body className="min-h-screen bg-[#050810] text-slate-100 overflow-x-hidden">
+      <body className="min-h-screen bg-[#03000a] text-slate-100 overflow-x-hidden">
         <div className="noise-overlay" aria-hidden="true" />
         <LoadingScreen />
         {children}
