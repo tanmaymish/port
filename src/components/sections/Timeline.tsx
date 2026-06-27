@@ -97,13 +97,13 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
+          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#9900ff", textShadow: "0 0 10px rgba(153,0,255,0.5)" }}>
             // 04 · TIMELINE · THE JOURNEY
           </span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(57,255,20,0.5))" }} />
-            <span style={{ color: "#39ff14", textShadow: "0 0 10px rgba(57,255,20,0.5)" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(57,255,20,0.5))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(153,0,255,0.6))" }} />
+            <span style={{ color: "#9900ff" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(153,0,255,0.6))" }} />
           </div>
         </motion.div>
 
@@ -114,10 +114,10 @@ export default function Timeline() {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.1, duration: 0.7 }}
-              className="mb-12"
+              className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-white mb-3">Engineering Journey</h2>
-              <p className="text-slate-400">
+              <h2 className="text-4xl font-bold text-white mb-3">⏳ Engineering Journey</h2>
+              <p style={{ color: "#94a3b8" }}>
                 A deliberate path through distributed systems, security, and backend
                 engineering — each year building on the last.
               </p>

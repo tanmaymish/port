@@ -5,12 +5,12 @@ import { useInView } from "react-intersection-observer";
 import { skills } from "@/data/portfolio";
 
 const categories = [
-  { label: "Languages", color: "#39ff14", items: skills.languages, description: "Python, Java, JS/TS, Go" },
-  { label: "Frameworks", color: "#cc00ff", items: skills.frameworks, description: "Backend-first, full-stack capable" },
-  { label: "Databases", color: "#00b4ff", items: skills.databases, description: "Relational, document, in-memory" },
-  { label: "DevOps & Infra", color: "#ffe000", items: skills.infrastructure, description: "Containers, messaging, distributed" },
-  { label: "Cybersecurity", color: "#ff0077", items: skills.cybersecurity, description: "Offensive mindset, defensive build" },
-  { label: "CS Fundamentals", color: "#e040fb", items: skills.cs, description: "Core theory, not just frameworks" },
+  { label: "Languages", color: "#39ff14", items: skills.languages, description: "Python, Java, JS/TS, Go", emoji: "💻" },
+  { label: "Frameworks", color: "#ff0077", items: skills.frameworks, description: "Backend-first, full-stack capable", emoji: "⚙️" },
+  { label: "Databases", color: "#0099ff", items: skills.databases, description: "Relational, document, in-memory", emoji: "🗄️" },
+  { label: "DevOps & Infra", color: "#ffcc00", items: skills.infrastructure, description: "Containers, messaging, distributed", emoji: "🛸" },
+  { label: "Cybersecurity", color: "#ff6600", items: skills.cybersecurity, description: "Offensive mindset, defensive build", emoji: "🛡️" },
+  { label: "CS Fundamentals", color: "#9900ff", items: skills.cs, description: "Core theory, not just frameworks", emoji: "🧠" },
 ];
 
 const PROFICIENCY: Record<string, number> = {
@@ -48,33 +48,37 @@ export default function Skills() {
   return (
     <section id="skills" className="section" ref={ref}>
       <div className="max-w-6xl mx-auto px-8">
-        {/* Centered section label */}
+        {/* Centered label */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
           className="text-center mb-16">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">// 02 · SKILLS · INTERDIMENSIONAL TECH</span>
+          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-blue">// 02 · SKILLS · INTERDIMENSIONAL TECH</span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(57,255,20,0.5))" }} />
-            <span style={{ color: "#39ff14", textShadow: "0 0 10px rgba(57,255,20,0.5)" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(57,255,20,0.5))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(0,153,255,0.6))" }} />
+            <span style={{ color: "#0099ff" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(0,153,255,0.6))" }} />
           </div>
         </motion.div>
 
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1, duration: 0.7 }} className="text-center mb-12">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1, duration: 0.7 }}
+          className="text-center mb-12">
           <h2 className="text-4xl font-black text-white mb-3">🛸 Interdimensional Tech Arsenal</h2>
-          <p className="max-w-xl mx-auto" style={{ color: "#94a3b8" }}>A deliberately chosen toolkit. Each layer picked for production viability across dimensions.</p>
+          <p className="max-w-lg mx-auto" style={{ color: "#94a3b8" }}>
+            A deliberately chosen toolkit. Each layer picked for production viability across dimensions.
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* CENTERED 3-col grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 justify-items-center">
           {categories.map((cat, i) => (
             <motion.div key={cat.label}
               initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 + i * 0.08, duration: 0.6 }}
-              className="p-6 rounded-2xl transition-all duration-300"
-              style={{ background: "rgba(10,3,30,0.92)", border: `1px solid ${cat.color}30` }}
+              className="w-full p-6 rounded-2xl text-center transition-all duration-300"
+              style={{ background: "rgba(8,2,24,0.92)", border: `1px solid ${cat.color}30` }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}60`;
-                (e.currentTarget as HTMLElement).style.boxShadow = `0 0 40px ${cat.color}20, 0 8px 40px rgba(0,0,0,0.4)`;
-                (e.currentTarget as HTMLElement).style.transform = "translateY(-4px)";
+                (e.currentTarget as HTMLElement).style.boxShadow = `0 0 50px ${cat.color}20`;
+                (e.currentTarget as HTMLElement).style.transform = "translateY(-5px)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}30`;
@@ -82,7 +86,8 @@ export default function Skills() {
                 (e.currentTarget as HTMLElement).style.transform = "none";
               }}
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="text-2xl mb-3">{cat.emoji}</div>
+              <div className="flex items-center justify-center gap-2 mb-2">
                 <h3 className="font-bold text-white text-sm">{cat.label}</h3>
                 <span className="text-xs px-2 py-0.5 rounded-full font-mono font-bold"
                   style={{ background: `${cat.color}18`, color: cat.color, border: `1px solid ${cat.color}40` }}>
@@ -90,10 +95,10 @@ export default function Skills() {
                 </span>
               </div>
               <p className="text-xs mb-5" style={{ color: "#64748b" }}>{cat.description}</p>
-              <div className="space-y-2.5 mb-5">
+              <div className="space-y-2.5 mb-5 text-left">
                 {cat.items.slice(0, 4).map((item) => PROFICIENCY[item] ? <SkillBar key={item} name={item} color={cat.color} /> : null)}
               </div>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-1.5 justify-center">
                 {cat.items.map((item) => (
                   <span key={item} className="text-xs px-2.5 py-1 rounded-lg font-mono"
                     style={{ background: `${cat.color}10`, color: cat.color, border: `1px solid ${cat.color}25` }}>
