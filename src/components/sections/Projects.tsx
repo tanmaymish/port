@@ -179,7 +179,7 @@ function ProjectCard({ project, index }: { project: (typeof projects)[0]; index:
                 {/* Architecture */}
                 <div>
                   <div className="flex items-center gap-2 mb-3">
-                    <Layers size={14} className="text-blue-400" />
+                    <Layers size={14} style={{ color: "#00ff88" }} />
                     <span className="text-xs font-semibold text-slate-300 uppercase tracking-wider">
                       Architecture
                     </span>
@@ -244,10 +244,10 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-semibold text-blue-400 tracking-widest uppercase">
+          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
             03 / Projects
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-green-500/20 to-transparent" />
         </motion.div>
 
         <motion.div

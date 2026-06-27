@@ -31,10 +31,10 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-semibold text-blue-400 tracking-widest uppercase">
+          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
             05 / Recognition
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-green-500/20 to-transparent" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16">

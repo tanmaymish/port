@@ -6,10 +6,10 @@ import { GraduationCap, Code2, Shield, Trophy } from "lucide-react";
 import { timeline } from "@/data/portfolio";
 
 const TYPE_CONFIG = {
-  education: { icon: GraduationCap, color: "#60a5fa", label: "Education" },
-  engineering: { icon: Code2, color: "#34d399", label: "Engineering" },
-  security: { icon: Shield, color: "#a78bfa", label: "Security" },
-  achievement: { icon: Trophy, color: "#fbbf24", label: "Achievement" },
+  education: { icon: GraduationCap, color: "#00ff88", label: "Education" },
+  engineering: { icon: Code2, color: "#00d4ff", label: "Engineering" },
+  security: { icon: Shield, color: "#8b30ff", label: "Security" },
+  achievement: { icon: Trophy, color: "#ffb800", label: "Achievement" },
 };
 
 function TimelineItem({
@@ -97,10 +97,10 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           className="flex items-center gap-3 mb-16"
         >
-          <span className="text-xs font-mono font-semibold text-blue-400 tracking-widest uppercase">
+          <span className="text-xs font-mono font-semibold tracking-widest uppercase" style={{ color: "#00ff88" }}>
             04 / Timeline
           </span>
-          <div className="flex-1 h-px bg-gradient-to-r from-blue-500/30 to-transparent" />
+          <div className="flex-1 h-px bg-gradient-to-r from-green-500/20 to-transparent" />
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-x-20 gap-y-0">

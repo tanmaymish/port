@@ -20,14 +20,10 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 40);
-
       const sections = navLinks.map((l) => l.href.slice(1));
       for (const id of sections.reverse()) {
         const el = document.getElementById(id);
-        if (el && window.scrollY >= el.offsetTop - 120) {
-          setActiveSection(id);
-          break;
-        }
+        if (el && window.scrollY >= el.offsetTop - 120) { setActiveSection(id); break; }
       }
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -44,38 +40,36 @@ export default function Navbar() {
       >
         <nav
           className={`w-full max-w-5xl transition-all duration-500 rounded-2xl ${
-            scrolled
-              ? "glass-strong shadow-xl shadow-black/20"
-              : "bg-transparent border-transparent"
+            scrolled ? "glass-strong" : "bg-transparent border-transparent"
           }`}
-          style={{ border: scrolled ? "1px solid rgba(255,255,255,0.1)" : "none" }}
+          style={{
+            border: scrolled ? "1px solid rgba(0,255,136,0.12)" : "none",
+            boxShadow: scrolled ? "0 4px 40px rgba(0,255,136,0.05)" : "none",
+          }}
         >
           <div className="flex items-center justify-between px-6 py-3">
-            {/* Logo */}
-            <a
-              href="#hero"
-              className="font-mono text-sm font-semibold text-slate-200 tracking-tight hover:text-blue-400 transition-colors"
-            >
-              <span className="text-blue-400">@</span>
-              tanmay
+            <a href="#hero" className="font-mono text-sm font-bold tracking-tight transition-colors"
+              style={{ color: "#e2e8f0" }}>
+              <span style={{ color: "#00ff88" }}>@</span>tanmay
             </a>
 
-            {/* Desktop Links */}
             <ul className="hidden md:flex items-center gap-1">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className={`relative px-4 py-2 text-sm font-medium transition-colors rounded-lg ${
-                      activeSection === link.href.slice(1)
-                        ? "text-white"
-                        : "text-slate-400 hover:text-slate-200"
-                    }`}
+                    className="relative px-4 py-2 text-sm font-medium transition-colors rounded-lg"
+                    style={{
+                      color: activeSection === link.href.slice(1) ? "#00ff88" : "#94a3b8",
+                    }}
+                    onMouseEnter={(e) => { if (activeSection !== link.href.slice(1)) (e.currentTarget as HTMLElement).style.color = "#e2e8f0"; }}
+                    onMouseLeave={(e) => { if (activeSection !== link.href.slice(1)) (e.currentTarget as HTMLElement).style.color = "#94a3b8"; }}
                   >
                     {activeSection === link.href.slice(1) && (
                       <motion.span
                         layoutId="nav-pill"
-                        className="absolute inset-0 bg-white/[0.06] rounded-lg"
+                        className="absolute inset-0 rounded-lg"
+                        style={{ background: "rgba(0,255,136,0.08)", border: "1px solid rgba(0,255,136,0.15)" }}
                         transition={{ type: "spring", bounce: 0.2, duration: 0.4 }}
                       />
                     )}
@@ -85,39 +79,42 @@ export default function Navbar() {
               ))}
             </ul>
 
-            {/* CTA */}
             <div className="hidden md:flex items-center gap-3">
               <a
                 href={`mailto:${personal.email}`}
-                className="text-sm font-medium px-4 py-2 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/40 transition-all duration-200"
+                className="text-sm font-semibold px-4 py-2 rounded-xl transition-all duration-200"
+                style={{
+                  background: "rgba(0,255,136,0.1)",
+                  border: "1px solid rgba(0,255,136,0.25)",
+                  color: "#00ff88",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.18)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(0,255,136,0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.1)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "none";
+                }}
               >
                 Hire Me
               </a>
             </div>
 
-            {/* Mobile toggle */}
-            <button
-              className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
-              onClick={() => setMenuOpen((o) => !o)}
-              aria-label="Toggle menu"
-            >
+            <button className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
+              onClick={() => setMenuOpen((o) => !o)} aria-label="Toggle menu">
               <div className="w-5 h-4 flex flex-col justify-between">
-                <span
-                  className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`}
-                />
-                <span
-                  className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[9px]" : ""}`}
-                />
+                <span className={`block h-0.5 rounded-full transition-all duration-300 ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`}
+                  style={{ background: "#00ff88" }} />
+                <span className={`block h-0.5 bg-slate-400 rounded-full transition-all duration-300 ${menuOpen ? "opacity-0" : ""}`} />
+                <span className={`block h-0.5 rounded-full transition-all duration-300 ${menuOpen ? "-rotate-45 -translate-y-[9px]" : ""}`}
+                  style={{ background: "#00ff88" }} />
               </div>
             </button>
           </div>
         </nav>
       </motion.header>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -128,24 +125,23 @@ export default function Navbar() {
             className="fixed inset-x-4 top-20 z-40 glass-strong rounded-2xl p-4 md:hidden"
           >
             {navLinks.map((link, i) => (
-              <motion.a
-                key={link.href}
-                href={link.href}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
+              <motion.a key={link.href} href={link.href}
+                initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.05 }}
-                className="flex items-center px-4 py-3 text-sm text-slate-300 hover:text-white rounded-xl hover:bg-white/5 transition-colors"
+                className="flex items-center px-4 py-3 text-sm rounded-xl transition-colors"
+                style={{ color: "#94a3b8" }}
+                onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#00ff88"; (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.06)"; }}
+                onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = "#94a3b8"; (e.currentTarget as HTMLElement).style.background = "transparent"; }}
                 onClick={() => setMenuOpen(false)}
               >
                 {link.label}
               </motion.a>
             ))}
-            <div className="mt-2 pt-2 border-t border-white/08">
-              <a
-                href={`mailto:${personal.email}`}
-                className="flex items-center justify-center px-4 py-3 text-sm font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-xl hover:bg-blue-500/20 transition-all"
-                onClick={() => setMenuOpen(false)}
-              >
+            <div className="mt-2 pt-2" style={{ borderTop: "1px solid rgba(0,255,136,0.1)" }}>
+              <a href={`mailto:${personal.email}`}
+                className="flex items-center justify-center px-4 py-3 text-sm font-semibold rounded-xl transition-all"
+                style={{ color: "#00ff88", background: "rgba(0,255,136,0.08)", border: "1px solid rgba(0,255,136,0.2)" }}
+                onClick={() => setMenuOpen(false)}>
                 Hire Me
               </a>
             </div>

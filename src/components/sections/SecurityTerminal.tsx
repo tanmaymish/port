@@ -5,25 +5,25 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 const LINES = [
-  { delay: 0, prefix: "$", text: "whoami", color: "#60a5fa" },
+  { delay: 0, prefix: "$", text: "whoami", color: "#00ff88" },
   { delay: 600, prefix: ">", text: "tanmay_mishra  [software_engineer | security_researcher]", color: "#94a3b8" },
-  { delay: 1200, prefix: "$", text: "cat skills.txt | grep -i security", color: "#60a5fa" },
-  { delay: 1800, prefix: ">", text: "OWASP · Burp Suite · Network Security · Recon · Bug Bounty · DDoS Defense · Cloud Security", color: "#a78bfa" },
-  { delay: 2400, prefix: "$", text: "ping distributed-systems.io", color: "#60a5fa" },
+  { delay: 1200, prefix: "$", text: "cat skills.txt | grep -i security", color: "#00ff88" },
+  { delay: 1800, prefix: ">", text: "OWASP · Burp Suite · Network Security · Recon · Bug Bounty · DDoS Defense · Cloud Security", color: "#8b30ff" },
+  { delay: 2400, prefix: "$", text: "ping distributed-systems.io", color: "#00ff88" },
   { delay: 3000, prefix: ">", text: "PING distributed-systems.io: 56 bytes", color: "#94a3b8" },
-  { delay: 3200, prefix: ">", text: "64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=2.1 ms", color: "#34d399" },
-  { delay: 3400, prefix: ">", text: "64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=1.8 ms", color: "#34d399" },
-  { delay: 3600, prefix: ">", text: "Round-trip min/avg/max = 1.8/1.95/2.1 ms  ✓ All nodes reachable", color: "#34d399" },
-  { delay: 4200, prefix: "$", text: "docker ps --format 'table {{.Names}}\\t{{.Status}}'", color: "#60a5fa" },
+  { delay: 3200, prefix: ">", text: "64 bytes from 10.0.0.1: icmp_seq=1 ttl=64 time=2.1 ms", color: "#00ff88" },
+  { delay: 3400, prefix: ">", text: "64 bytes from 10.0.0.1: icmp_seq=2 ttl=64 time=1.8 ms", color: "#00ff88" },
+  { delay: 3600, prefix: ">", text: "Round-trip min/avg/max = 1.8/1.95/2.1 ms  ✓ All nodes reachable", color: "#00ff88" },
+  { delay: 4200, prefix: "$", text: "docker ps --format 'table {{.Names}}\\t{{.Status}}'", color: "#00ff88" },
   { delay: 4800, prefix: ">", text: "doms-order-service     Up 47 days   HEALTHY", color: "#94a3b8" },
   { delay: 5000, prefix: ">", text: "kafka-broker-1         Up 47 days   HEALTHY", color: "#94a3b8" },
   { delay: 5200, prefix: ">", text: "postgres-primary       Up 47 days   HEALTHY", color: "#94a3b8" },
-  { delay: 5800, prefix: "$", text: "nmap -sV --open target.example.com -p 1-1000", color: "#60a5fa" },
+  { delay: 5800, prefix: "$", text: "nmap -sV --open target.example.com -p 1-1000", color: "#00ff88" },
   { delay: 6400, prefix: ">", text: "Starting Nmap 7.94 scan...", color: "#94a3b8" },
-  { delay: 6600, prefix: ">", text: "22/tcp  open  ssh     OpenSSH 8.9", color: "#fbbf24" },
-  { delay: 6800, prefix: ">", text: "80/tcp  open  http    nginx 1.24.0", color: "#fbbf24" },
-  { delay: 7000, prefix: ">", text: "443/tcp open  https   nginx 1.24.0  [TLS 1.3]", color: "#34d399" },
-  { delay: 7600, prefix: "$", text: "█", color: "#60a5fa" },
+  { delay: 6600, prefix: ">", text: "22/tcp  open  ssh     OpenSSH 8.9", color: "#ffb800" },
+  { delay: 6800, prefix: ">", text: "80/tcp  open  http    nginx 1.24.0", color: "#ffb800" },
+  { delay: 7000, prefix: ">", text: "443/tcp open  https   nginx 1.24.0  [TLS 1.3]", color: "#00ff88" },
+  { delay: 7600, prefix: "$", text: "█", color: "#00ff88" },
 ];
 
 export default function SecurityTerminal() {
@@ -47,11 +47,11 @@ export default function SecurityTerminal() {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="glass rounded-2xl border border-white/10 overflow-hidden"
-          style={{ boxShadow: "0 0 60px rgba(59,130,246,0.06)" }}
+          className="glass rounded-2xl  overflow-hidden"
+          style={{ boxShadow: "0 0 60px rgba(0,255,136,0.06)" }}
         >
           {/* Terminal titlebar */}
-          <div className="flex items-center gap-2 px-5 py-3.5 border-b border-white/08 bg-white/02">
+          <div className="flex items-center gap-2 px-5 py-3.5 border-b">
             <div className="flex gap-1.5">
               <div className="w-3 h-3 rounded-full bg-red-500/60" />
               <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
