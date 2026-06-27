@@ -19,7 +19,7 @@ export const personal = {
   social: {
     github: "tanmaymish",
     email: "tanmaymish78@gmail.com",
-    linkedin: "tanmaymish",
+    linkedin: "tanmay-mishra-0308a8207",
   },
 };
 

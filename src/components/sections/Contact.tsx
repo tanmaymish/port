@@ -8,7 +8,7 @@ import { personal } from "@/data/portfolio";
 const links = [
   { icon: Mail, label: "Email", value: personal.email, href: `mailto:${personal.email}`, color: "#34e89e" },
   { icon: Link2, label: "GitHub", value: `@${personal.social.github}`, href: `https://github.com/${personal.social.github}`, color: "#2dd4bf" },
-  { icon: Link2, label: "LinkedIn", value: `in/${personal.social.linkedin}`, href: `https://linkedin.com/in/${personal.social.linkedin}`, color: "#38bdf8" },
+  { icon: Link2, label: "LinkedIn", value: "in/tanmay-mishra", href: `https://linkedin.com/in/${personal.social.linkedin}`, color: "#38bdf8" },
 ];
 
 export default function Contact() {
