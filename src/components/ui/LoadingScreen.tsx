@@ -38,27 +38,43 @@ export default function LoadingScreen() {
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#0a0a0c]"
         >
+          {/* Zen Rick */}
+          <motion.img
+            src="/port/rick-zen.gif"
+            alt=""
+            aria-hidden="true"
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="mb-8 rounded-2xl"
+            style={{
+              width: 220,
+              border: "1px solid rgba(52,232,158,0.25)",
+              boxShadow: "0 0 40px rgba(52,232,158,0.15)",
+            }}
+          />
+
           {/* Logo / name */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="mb-12 text-center"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="mb-8 text-center"
           >
             <div className="font-mono text-2xl font-bold text-white mb-1">
-              <span className="text-blue-400">@</span>tanmay
+              <span style={{ color: "#34e89e" }}>@</span>tanmay
             </div>
             <div className="text-xs text-slate-600 tracking-widest uppercase font-mono">
-              Loading portfolio
+              Entering the portal
             </div>
           </motion.div>
 
           {/* Progress bar */}
-          <div className="w-48 h-px bg-white/08 rounded-full overflow-hidden">
+          <div className="w-48 h-px bg-white/10 rounded-full overflow-hidden">
             <motion.div
               className="h-full rounded-full"
               style={{
-                background: "linear-gradient(90deg, #3b82f6, #8b5cf6)",
+                background: "linear-gradient(90deg, #34e89e, #5eead4)",
                 width: `${progress}%`,
               }}
               transition={{ duration: 0.1 }}
