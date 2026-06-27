@@ -31,13 +31,13 @@ export default function Certifications() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#ff6600", textShadow: "0 0 10px rgba(255,102,0,0.5)" }}>
-            // 05 · RECOGNITION · EARNED
+          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#34e89e", textShadow: "0 0 14px rgba(52,232,158,0.35)" }}>
+            // 05 · RECOGNITION
           </span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(255,102,0,0.6))" }} />
-            <span style={{ color: "#ff6600" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(255,102,0,0.6))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(52,232,158,0.5))" }} />
+            <span style={{ color: "#34e89e" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(52,232,158,0.5))" }} />
           </div>
         </motion.div>
 
@@ -50,7 +50,7 @@ export default function Certifications() {
               transition={{ delay: 0.1, duration: 0.7 }}
               className="mb-8"
             >
-              <h2 className="text-3xl font-bold text-white mb-2 text-center">🏆 Certifications</h2>
+              <h2 className="text-3xl font-bold text-white mb-2 text-center">Certifications</h2>
               <p className="text-slate-500 text-sm text-center">Security-focused professional credentials</p>
             </motion.div>
 
@@ -101,7 +101,7 @@ export default function Certifications() {
               transition={{ delay: 0.1, duration: 0.7 }}
               className="mb-8"
             >
-              <h2 className="text-3xl font-bold text-white mb-2 text-center">⚡ Achievements</h2>
+              <h2 className="text-3xl font-bold text-white mb-2 text-center">Achievements</h2>
               <p className="text-slate-500 text-sm text-center">Milestones that reflect engineering commitment</p>
             </motion.div>
 

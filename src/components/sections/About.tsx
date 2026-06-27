@@ -6,10 +6,10 @@ import { MapPin, GraduationCap, Code2, Shield, Server, Cpu } from "lucide-react"
 import { personal } from "@/data/portfolio";
 
 const pillars = [
-  { icon: Server, title: "Distributed Systems", description: "Fault tolerance, horizontal scalability, graceful degradation.", color: "#39ff14" },
-  { icon: Shield, title: "Cybersecurity", description: "OWASP, recon automation, cloud security, trust boundaries.", color: "#ff0077" },
-  { icon: Code2, title: "Backend Engineering", description: "Production-grade APIs, microservices, data pipelines.", color: "#0099ff" },
-  { icon: Cpu, title: "Systems Thinking", description: "From compiler design to OS — I know what's below the stack.", color: "#ffcc00" },
+  { icon: Server, title: "Distributed Systems", description: "Fault tolerance, horizontal scalability, graceful degradation.", color: "#34e89e" },
+  { icon: Shield, title: "Cybersecurity", description: "OWASP, recon automation, cloud security, trust boundaries.", color: "#38bdf8" },
+  { icon: Code2, title: "Backend Engineering", description: "Production-grade APIs, microservices, data pipelines.", color: "#2dd4bf" },
+  { icon: Cpu, title: "Systems Thinking", description: "From compiler design to OS — I know what's below the stack.", color: "#818cf8" },
 ];
 
 export default function About() {
@@ -20,11 +20,11 @@ export default function About() {
         {/* Centered label */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
           className="text-center mb-16">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-pink">// 01 · ABOUT · DIMENSION C-137</span>
+          <span className="text-xs font-mono font-bold tracking-widest uppercase accent-glow">// 01 · ABOUT</span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(255,0,119,0.6))" }} />
-            <span style={{ color: "#ff0077" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(255,0,119,0.6))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(52,232,158,0.5))" }} />
+            <span style={{ color: "#38bdf8" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(52,232,158,0.5))" }} />
           </div>
         </motion.div>
 
@@ -42,8 +42,8 @@ export default function About() {
           {/* Rick quote */}
           <div className="inline-block mt-5 px-5 py-3 rounded-xl"
             style={{ background: "rgba(255,0,119,0.07)", border: "1px solid rgba(255,0,119,0.25)" }}>
-            <p className="text-sm font-mono italic" style={{ color: "#ff0077" }}>
-              🧪 "Nobody exists on purpose. Nobody belongs anywhere. But I still ship to prod." — Rick
+            <p className="text-sm font-mono italic" style={{ color: "#38bdf8" }}>
+              "Nobody exists on purpose. Nobody belongs anywhere. But I still ship to prod." — Rick
             </p>
           </div>
         </motion.div>
@@ -52,13 +52,13 @@ export default function About() {
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.25, duration: 0.7 }}
           className="flex flex-wrap justify-center gap-4 mb-14">
           {[
-            { icon: GraduationCap, color: "#39ff14", title: personal.education.degree, sub: `${personal.education.university} · GPA ${personal.education.gpa}` },
+            { icon: GraduationCap, color: "#34e89e", title: personal.education.degree, sub: `${personal.education.university} · GPA ${personal.education.gpa}` },
             { icon: MapPin, color: "#9900ff", title: `${personal.location}`, sub: "Available for remote roles globally" },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
               <div key={i} className="flex items-center gap-3 px-5 py-3 rounded-xl text-sm"
-                style={{ background: "rgba(8,2,24,0.92)", border: `1px solid ${item.color}30` }}>
+                style={{ background: "rgba(255,255,255,0.035)", border: `1px solid ${item.color}30` }}>
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0"
                   style={{ background: `${item.color}12`, border: `1px solid ${item.color}30` }}>
                   <Icon size={16} style={{ color: item.color }} />
@@ -81,7 +81,7 @@ export default function About() {
                 initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 + i * 0.1, duration: 0.6 }}
                 className="w-full p-5 rounded-2xl text-center transition-all duration-300 cursor-default"
-                style={{ background: "rgba(8,2,24,0.92)", border: `1px solid ${p.color}30` }}
+                style={{ background: "rgba(255,255,255,0.035)", border: `1px solid ${p.color}30` }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLElement).style.boxShadow = `0 0 50px ${p.color}25, 0 0 100px ${p.color}10`;
                   (e.currentTarget as HTMLElement).style.borderColor = `${p.color}60`;

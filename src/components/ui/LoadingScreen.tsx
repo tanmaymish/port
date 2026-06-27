@@ -36,7 +36,7 @@ export default function LoadingScreen() {
         <motion.div
           exit={{ opacity: 0 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#03000a]"
+          className="fixed inset-0 z-[200] flex flex-col items-center justify-center bg-[#0a0a0c]"
         >
           {/* Logo / name */}
           <motion.div

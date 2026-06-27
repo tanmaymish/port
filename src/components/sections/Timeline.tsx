@@ -6,10 +6,10 @@ import { GraduationCap, Code2, Shield, Trophy } from "lucide-react";
 import { timeline } from "@/data/portfolio";
 
 const TYPE_CONFIG = {
-  education: { icon: GraduationCap, color: "#00ff88", label: "Education" },
-  engineering: { icon: Code2, color: "#00d4ff", label: "Engineering" },
-  security: { icon: Shield, color: "#8b30ff", label: "Security" },
-  achievement: { icon: Trophy, color: "#ffb800", label: "Achievement" },
+  education: { icon: GraduationCap, color: "#34e89e", label: "Education" },
+  engineering: { icon: Code2, color: "#2dd4bf", label: "Engineering" },
+  security: { icon: Shield, color: "#818cf8", label: "Security" },
+  achievement: { icon: Trophy, color: "#38bdf8", label: "Achievement" },
 };
 
 function TimelineItem({
@@ -97,13 +97,13 @@ export default function Timeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#9900ff", textShadow: "0 0 10px rgba(153,0,255,0.5)" }}>
-            // 04 · TIMELINE · THE JOURNEY
+          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#34e89e", textShadow: "0 0 14px rgba(52,232,158,0.35)" }}>
+            // 04 · TIMELINE
           </span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(153,0,255,0.6))" }} />
-            <span style={{ color: "#9900ff" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(153,0,255,0.6))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(52,232,158,0.5))" }} />
+            <span style={{ color: "#34e89e" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(52,232,158,0.5))" }} />
           </div>
         </motion.div>
 
@@ -116,7 +116,7 @@ export default function Timeline() {
               transition={{ delay: 0.1, duration: 0.7 }}
               className="text-center mb-12"
             >
-              <h2 className="text-4xl font-bold text-white mb-3">⏳ Engineering Journey</h2>
+              <h2 className="text-4xl font-bold text-white mb-3">Engineering Journey</h2>
               <p style={{ color: "#94a3b8" }}>
                 A deliberate path through distributed systems, security, and backend
                 engineering — each year building on the last.

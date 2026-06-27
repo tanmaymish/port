@@ -5,12 +5,12 @@ import { useInView } from "react-intersection-observer";
 import { skills } from "@/data/portfolio";
 
 const categories = [
-  { label: "Languages", color: "#39ff14", items: skills.languages, description: "Python, Java, JS/TS, Go", emoji: "💻" },
-  { label: "Frameworks", color: "#ff0077", items: skills.frameworks, description: "Backend-first, full-stack capable", emoji: "⚙️" },
-  { label: "Databases", color: "#0099ff", items: skills.databases, description: "Relational, document, in-memory", emoji: "🗄️" },
-  { label: "DevOps & Infra", color: "#ffcc00", items: skills.infrastructure, description: "Containers, messaging, distributed", emoji: "🛸" },
-  { label: "Cybersecurity", color: "#ff6600", items: skills.cybersecurity, description: "Offensive mindset, defensive build", emoji: "🛡️" },
-  { label: "CS Fundamentals", color: "#9900ff", items: skills.cs, description: "Core theory, not just frameworks", emoji: "🧠" },
+  { label: "Languages", color: "#34e89e", items: skills.languages, description: "Python, Java, JS/TS, Go" },
+  { label: "Frameworks", color: "#38bdf8", items: skills.frameworks, description: "Backend-first, full-stack capable" },
+  { label: "Databases", color: "#2dd4bf", items: skills.databases, description: "Relational, document, in-memory" },
+  { label: "DevOps & Infra", color: "#818cf8", items: skills.infrastructure, description: "Containers, messaging, distributed" },
+  { label: "Cybersecurity", color: "#22d3ee", items: skills.cybersecurity, description: "Offensive mindset, defensive build" },
+  { label: "CS Fundamentals", color: "#4ade80", items: skills.cs, description: "Core theory, not just frameworks" },
 ];
 
 const PROFICIENCY: Record<string, number> = {
@@ -51,17 +51,17 @@ export default function Skills() {
         {/* Centered label */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }}
           className="text-center mb-16">
-          <span className="text-xs font-mono font-bold tracking-widest uppercase neon-blue">// 02 · SKILLS · INTERDIMENSIONAL TECH</span>
+          <span className="text-xs font-mono font-bold tracking-widest uppercase accent-glow">// 02 · SKILLS</span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(0,153,255,0.6))" }} />
-            <span style={{ color: "#0099ff" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(0,153,255,0.6))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(52,232,158,0.5))" }} />
+            <span style={{ color: "#2dd4bf" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(52,232,158,0.5))" }} />
           </div>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.1, duration: 0.7 }}
           className="text-center mb-12">
-          <h2 className="text-4xl font-black text-white mb-3">🛸 Interdimensional Tech Arsenal</h2>
+          <h2 className="text-4xl font-black text-white mb-3">Technical Stack</h2>
           <p className="max-w-lg mx-auto" style={{ color: "#94a3b8" }}>
             A deliberately chosen toolkit. Each layer picked for production viability across dimensions.
           </p>
@@ -74,7 +74,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.15 + i * 0.08, duration: 0.6 }}
               className="w-full p-6 rounded-2xl text-center transition-all duration-300"
-              style={{ background: "rgba(8,2,24,0.92)", border: `1px solid ${cat.color}30` }}
+              style={{ background: "rgba(255,255,255,0.035)", border: `1px solid ${cat.color}30` }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.borderColor = `${cat.color}60`;
                 (e.currentTarget as HTMLElement).style.boxShadow = `0 0 50px ${cat.color}20`;
@@ -86,7 +86,6 @@ export default function Skills() {
                 (e.currentTarget as HTMLElement).style.transform = "none";
               }}
             >
-              <div className="text-2xl mb-3">{cat.emoji}</div>
               <div className="flex items-center justify-center gap-2 mb-2">
                 <h3 className="font-bold text-white text-sm">{cat.label}</h3>
                 <span className="text-xs px-2 py-0.5 rounded-full font-mono font-bold"

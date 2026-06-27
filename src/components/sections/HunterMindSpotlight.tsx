@@ -5,11 +5,11 @@ import { useInView } from "react-intersection-observer";
 import { Shield, Cpu, Network, Search, ArrowUpRight, Radio } from "lucide-react";
 
 const modules = [
-  { icon: Search, name: "Passive Recon", description: "Subdomain enumeration, DNS resolution, WHOIS, certificate transparency", color: "#00ff88" },
-  { icon: Network, name: "Active Enumeration", description: "Port scanning, service fingerprinting, technology detection", color: "#00d4ff" },
-  { icon: Shield, name: "Vulnerability Surface", description: "Parameter discovery, endpoint mapping, authentication boundary detection", color: "#8b30ff" },
-  { icon: Cpu, name: "AI Correlation Engine", description: "Cross-source data correlation, high-value target scoring, anomaly detection", color: "#ffb800" },
-  { icon: Radio, name: "Live Dashboard", description: "Real-time recon session monitoring, findings graph visualization", color: "#e040fb" },
+  { icon: Search, name: "Passive Recon", description: "Subdomain enumeration, DNS resolution, WHOIS, certificate transparency", color: "#34e89e" },
+  { icon: Network, name: "Active Enumeration", description: "Port scanning, service fingerprinting, technology detection", color: "#38bdf8" },
+  { icon: Shield, name: "Vulnerability Surface", description: "Parameter discovery, endpoint mapping, authentication boundary detection", color: "#818cf8" },
+  { icon: Cpu, name: "AI Correlation Engine", description: "Cross-source data correlation, high-value target scoring, anomaly detection", color: "#2dd4bf" },
+  { icon: Radio, name: "Live Dashboard", description: "Real-time recon session monitoring, findings graph visualization", color: "#22d3ee" },
 ];
 
 const stats = [
@@ -25,7 +25,7 @@ export default function HunterMindSpotlight() {
   return (
     <section className="section relative overflow-hidden" ref={ref}>
       <div className="absolute inset-0 pointer-events-none" style={{
-        background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(0,255,136,0.04) 0%, rgba(139,48,255,0.03) 50%, transparent 70%)",
+        background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(52,232,158,0.04) 0%, rgba(129,140,248,0.03) 50%, transparent 70%)",
       }} />
 
       <div className="max-w-6xl mx-auto px-8 relative">
@@ -34,7 +34,7 @@ export default function HunterMindSpotlight() {
           <span className="text-xs font-mono font-bold tracking-widest uppercase neon-green">
             Flagship Project
           </span>
-          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, rgba(0,255,136,0.3), transparent)" }} />
+          <div className="flex-1 h-px" style={{ background: "linear-gradient(to right, rgba(52,232,158,0.3), transparent)" }} />
         </motion.div>
 
         {/* Header row */}
@@ -43,12 +43,12 @@ export default function HunterMindSpotlight() {
             <motion.div initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.05, duration: 0.6 }}
               className="flex items-center gap-2 mb-4">
               <div className="flex items-center gap-2 px-3 py-1.5 rounded-full w-fit"
-                style={{ background: "rgba(0,255,136,0.08)", border: "1px solid rgba(0,255,136,0.2)" }}>
+                style={{ background: "rgba(52,232,158,0.08)", border: "1px solid rgba(52,232,158,0.2)" }}>
                 <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: "#00ff88" }} />
-                  <span className="relative inline-flex rounded-full h-2 w-2" style={{ background: "#00ff88" }} />
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ background: "#34e89e" }} />
+                  <span className="relative inline-flex rounded-full h-2 w-2" style={{ background: "#34e89e" }} />
                 </span>
-                <span className="text-xs font-mono" style={{ color: "#00ff88" }}>In Development</span>
+                <span className="text-xs font-mono" style={{ color: "#34e89e" }}>In Development</span>
               </div>
             </motion.div>
 
@@ -56,7 +56,7 @@ export default function HunterMindSpotlight() {
               className="text-5xl font-bold text-white leading-tight">
               Hunter
               <span style={{
-                background: "linear-gradient(135deg, #00ff88, #00d4ff)",
+                background: "linear-gradient(135deg, #34e89e, #38bdf8)",
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
                 backgroundClip: "text",
@@ -71,13 +71,13 @@ export default function HunterMindSpotlight() {
           <motion.a initial={{ opacity: 0, y: 16 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ delay: 0.25, duration: 0.6 }}
             href="https://github.com/tanmaymish" target="_blank" rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl text-sm font-medium transition-all duration-200 self-start md:self-auto"
-            style={{ color: "#00ff88", border: "1px solid rgba(0,255,136,0.2)", background: "rgba(0,255,136,0.06)" }}
+            style={{ color: "#34e89e", border: "1px solid rgba(52,232,158,0.2)", background: "rgba(52,232,158,0.06)" }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.12)";
-              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(0,255,136,0.15)";
+              (e.currentTarget as HTMLElement).style.background = "rgba(52,232,158,0.12)";
+              (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(52,232,158,0.15)";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = "rgba(0,255,136,0.06)";
+              (e.currentTarget as HTMLElement).style.background = "rgba(52,232,158,0.06)";
               (e.currentTarget as HTMLElement).style.boxShadow = "none";
             }}
           >
@@ -103,7 +103,7 @@ export default function HunterMindSpotlight() {
             <div className="flex flex-wrap gap-2 pt-2">
               {["Python", "Go", "React", "PostgreSQL", "Redis", "Docker", "REST APIs"].map((t) => (
                 <span key={t} className="text-xs font-mono px-3 py-1 rounded-lg"
-                  style={{ background: "rgba(0,255,136,0.07)", color: "#00ff88", border: "1px solid rgba(0,255,136,0.15)" }}>
+                  style={{ background: "rgba(52,232,158,0.07)", color: "#34e89e", border: "1px solid rgba(52,232,158,0.15)" }}>
                   {t}
                 </span>
               ))}
@@ -116,8 +116,8 @@ export default function HunterMindSpotlight() {
                 initial={{ opacity: 0, scale: 0.95 }} animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ delay: 0.3 + i * 0.07, duration: 0.5 }}
                 className="p-4 rounded-xl"
-                style={{ background: "rgba(0,255,136,0.05)", border: "1px solid rgba(0,255,136,0.12)" }}>
-                <div className="text-lg font-bold" style={{ color: "#00ff88" }}>{s.value}</div>
+                style={{ background: "rgba(52,232,158,0.05)", border: "1px solid rgba(52,232,158,0.12)" }}>
+                <div className="text-lg font-bold" style={{ color: "#34e89e" }}>{s.value}</div>
                 <div className="text-xs mt-0.5" style={{ color: "#64748b" }}>{s.label}</div>
               </motion.div>
             ))}
@@ -138,7 +138,7 @@ export default function HunterMindSpotlight() {
                 initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.35 + i * 0.07, duration: 0.5 }}
                 className="group flex items-start gap-4 p-4 rounded-xl transition-all duration-300"
-                style={{ background: "rgba(8,2,20,0.9)", border: `1px solid ${mod.color}12` }}
+                style={{ background: "rgba(255,255,255,0.035)", border: `1px solid ${mod.color}12` }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLElement).style.boxShadow = `0 4px 30px ${mod.color}15`;
                   (e.currentTarget as HTMLElement).style.borderColor = `${mod.color}30`;
@@ -165,7 +165,7 @@ export default function HunterMindSpotlight() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.35 + 5 * 0.07, duration: 0.5 }}
             className="flex items-center justify-center p-4 rounded-xl border border-dashed"
-            style={{ borderColor: "rgba(0,255,136,0.15)" }}>
+            style={{ borderColor: "rgba(52,232,158,0.15)" }}>
             <span className="text-xs font-mono" style={{ color: "#475569" }}>+ more modules planned</span>
           </motion.div>
         </div>

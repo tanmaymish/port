@@ -244,13 +244,13 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#ffcc00", textShadow: "0 0 10px rgba(255,204,0,0.5)" }}>
-            // 03 · PROJECTS · INTERDIMENSIONAL BUILDS
+          <span className="text-xs font-mono font-bold tracking-widest uppercase" style={{ color: "#34e89e", textShadow: "0 0 14px rgba(52,232,158,0.35)" }}>
+            // 03 · PROJECTS
           </span>
           <div className="flex items-center justify-center gap-4 mt-3">
-            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(255,204,0,0.6))" }} />
-            <span style={{ color: "#ffcc00" }}>◈</span>
-            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(255,204,0,0.6))" }} />
+            <div className="h-px w-24" style={{ background: "linear-gradient(to right, transparent, rgba(52,232,158,0.5))" }} />
+            <span style={{ color: "#34e89e" }}>◈</span>
+            <div className="h-px w-24" style={{ background: "linear-gradient(to left, transparent, rgba(52,232,158,0.5))" }} />
           </div>
         </motion.div>
 
@@ -260,7 +260,7 @@ export default function Projects() {
           transition={{ delay: 0.1, duration: 0.7 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl font-bold text-white mb-3">🚀 Production Systems</h2>
+          <h2 className="text-4xl font-bold text-white mb-3">Production Systems</h2>
           <p className="max-w-xl mx-auto" style={{ color: "#94a3b8" }}>
             Every project solves a real problem with a production-grade design. Click any card
             to explore architecture decisions, engineering challenges, and solutions.
