@@ -7,6 +7,7 @@ import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Timeline from "@/components/sections/Timeline";
 import Certifications from "@/components/sections/Certifications";
+import Resume from "@/components/sections/Resume";
 import SecurityTerminal from "@/components/sections/SecurityTerminal";
 import HunterMindSpotlight from "@/components/sections/HunterMindSpotlight";
 import Contact from "@/components/sections/Contact";
@@ -30,6 +31,7 @@ export default function Home() {
         <Certifications />
         <HunterMindSpotlight />
         <SecurityTerminal />
+        <Resume />
         <Contact />
       </main>
       <CommandPalette />
