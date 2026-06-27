@@ -14,10 +14,10 @@ const categories = [
 ];
 
 const PROFICIENCY: Record<string, number> = {
-  Python: 88, Java: 85, JavaScript: 82, TypeScript: 78, SQL: 80, Bash: 75, Go: 40,
-  "Spring Boot": 85, Flask: 75, "Node.js": 78, React: 72, "Next.js": 70,
+  Python: 88, Java: 90, JavaScript: 82, TypeScript: 68, SQL: 80, Bash: 75, Go: 40,
+  "Spring Boot": 88, Flask: 75, "Node.js": 78, React: 72, "Next.js": 70,
   PostgreSQL: 82, MongoDB: 76, Redis: 72,
-  Docker: 78, Kafka: 80, Linux: 82, Git: 85,
+  Docker: 78, Kafka: 82, Linux: 82, Git: 85,
 };
 
 function SkillBar({ name, color }: { name: string; color: string }) {

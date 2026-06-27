@@ -10,76 +10,59 @@ const ROLES = personal.roles;
 function Portal() {
   return (
     <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-      {/* Outer spinning portal layer */}
+      {/* Ring 1 — outer conic ring masked to only show outer band */}
       <div
         className="absolute rounded-full"
         style={{
-          width: 640,
-          height: 640,
+          width: 680,
+          height: 680,
           background:
             "conic-gradient(from 0deg, #39ff14 0%, #00ff88 8%, #001a00 18%, #39ff14 28%, #00ff44 38%, #002800 48%, #39ff14 58%, #00ff88 68%, #001a00 78%, #39ff14 88%, #00ff44 100%)",
-          filter: "blur(5px)",
+          filter: "blur(6px)",
           animation: "portal-rotate 2.2s linear infinite",
-          opacity: 0.95,
+          WebkitMaskImage: "radial-gradient(circle, transparent 44%, black 47%, black 100%)",
+          maskImage: "radial-gradient(circle, transparent 44%, black 47%, black 100%)",
+          opacity: 1,
         }}
       />
-      {/* Mid layer reverse spin */}
+      {/* Ring 2 — mid reverse spin */}
       <div
         className="absolute rounded-full"
         style={{
-          width: 580,
-          height: 580,
+          width: 600,
+          height: 600,
           background:
-            "conic-gradient(from 90deg, #003300 0%, #39ff14 12%, #004400 24%, #00ff66 36%, #002200 48%, #39ff14 60%, #005500 72%, #00ff44 84%, #003300 100%)",
-          filter: "blur(3px)",
+            "conic-gradient(from 90deg, #003300 0%, #39ff14 15%, #004400 30%, #00ff66 45%, #002200 60%, #39ff14 75%, #005500 90%, #00ff44 100%)",
+          filter: "blur(4px)",
           animation: "portal-rotate 1.4s linear infinite reverse",
+          WebkitMaskImage: "radial-gradient(circle, transparent 43%, black 47%, black 100%)",
+          maskImage: "radial-gradient(circle, transparent 43%, black 47%, black 100%)",
           opacity: 0.9,
         }}
       />
-      {/* Inner tight spin */}
+      {/* Ring 3 — inner fast spin */}
       <div
         className="absolute rounded-full"
         style={{
-          width: 480,
-          height: 480,
+          width: 500,
+          height: 500,
           background:
-            "conic-gradient(from 180deg, #39ff14 0%, #001800 20%, #00ff44 40%, #002200 60%, #39ff14 80%, #001800 100%)",
-          filter: "blur(2px)",
+            "conic-gradient(from 180deg, #39ff14 0%, #001800 25%, #00ff44 50%, #002200 75%, #39ff14 100%)",
+          filter: "blur(3px)",
           animation: "portal-rotate 0.9s linear infinite",
+          WebkitMaskImage: "radial-gradient(circle, transparent 42%, black 46%, black 100%)",
+          maskImage: "radial-gradient(circle, transparent 42%, black 46%, black 100%)",
           opacity: 0.85,
         }}
       />
-      {/* Dark abyss center */}
+      {/* Outer glow aura */}
       <div
         className="absolute rounded-full"
         style={{
-          width: 360,
-          height: 360,
-          background:
-            "radial-gradient(circle, #000a00 0%, #010d01 40%, #001100 70%, transparent 100%)",
-        }}
-      />
-      {/* Inner green glow pulse */}
-      <div
-        className="absolute rounded-full"
-        style={{
-          width: 240,
-          height: 240,
-          background:
-            "radial-gradient(circle, rgba(57,255,20,0.25) 0%, rgba(0,255,68,0.1) 50%, transparent 80%)",
-          animation: "portal-pulse 2.5s ease-in-out infinite",
-        }}
-      />
-      {/* Portal edge glow */}
-      <div
-        className="absolute rounded-full"
-        style={{
-          width: 645,
-          height: 645,
+          width: 700,
+          height: 700,
           boxShadow:
-            "0 0 40px rgba(57,255,20,0.5), 0 0 80px rgba(57,255,20,0.3), 0 0 120px rgba(57,255,20,0.15)",
-          borderRadius: "50%",
-          pointerEvents: "none",
+            "0 0 60px rgba(57,255,20,0.6), 0 0 120px rgba(57,255,20,0.3), 0 0 200px rgba(57,255,20,0.15)",
         }}
       />
     </div>
